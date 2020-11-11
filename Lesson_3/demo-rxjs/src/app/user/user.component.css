@@ -4,10 +4,12 @@ li{
     padding: 5px 10px;
     margin: 10px;
     box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.5);
+    flex-basis: 100%;
 }
 
 li:hover{
     transform: scale(1.2);
     background-color: rgb(72, 102, 122);
     color: white;
+    cursor: pointer;
 }

@@ -11,6 +11,24 @@
     align-items: stretch;
 }
 
+@media screen and (max-width: 768px) {
+    .search-component {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-component-input{
+        flex-basis: 100%;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .search-component-input input{
+        width: 60%;
+        margin: 5px auto;
+    }
+  }
+
 .search-component-input label{
     font-size: 18px;
     font-weight: 600;
@@ -42,4 +60,10 @@
     padding: 5px 10px;
     color: rgb(19, 8, 48);
     font-weight: 600;
+}
+
+.search-component-result-user:hover{
+    cursor: pointer;
+    background-color: cadetblue;
+    transform: translateY(5px);
 }

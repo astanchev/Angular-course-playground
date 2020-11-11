@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs/operators';
 import { IUser } from '../interfaces/user';
 import { UsersService } from '../services/users.service';
 
@@ -17,9 +17,13 @@ export class UserSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.users$ = this.searchTerms.pipe(
+      tap(console.log),
       debounceTime(300),
+      tap(console.log),
       distinctUntilChanged(),
+      tap(console.log),
       switchMap((term: string) => this.usersService.searchUsers(term)),
+      tap(console.log),
     )
   }
 

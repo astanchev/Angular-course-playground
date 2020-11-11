@@ -22,7 +22,7 @@ export class UsersService {
     }
 
     return this.http.get<IUser[]>(this.url).pipe(
-      map((data: IUser[]) => data.filter(u => (u.name).toLowerCase().indexOf(term) >= 0))
+      map((data: IUser[]) => data.filter(u => (u.name).toLowerCase().indexOf(term.toLowerCase()) >= 0))
     );
   }
 }

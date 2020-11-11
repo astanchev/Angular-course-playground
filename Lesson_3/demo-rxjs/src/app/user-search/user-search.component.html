@@ -1,0 +1,20 @@
+<section class="search-component">
+
+  <section class="search-component-input">
+
+    <label for="search-box">User Search</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  </section>
+
+  <section class="search-component-result">
+
+    <ul class="search-component-result-list">
+      <li class="search-component-result-user" *ngFor="let user of users$ | async">
+        {{user.id}}. {{user.name}}
+      </li>
+    </ul>
+
+  </section>
+
+</section>

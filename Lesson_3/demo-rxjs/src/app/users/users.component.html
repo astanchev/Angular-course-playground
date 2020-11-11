@@ -1,0 +1,6 @@
+<ul>
+  <app-user class="list-item" *ngFor="let u of users$ | async" [user]="u">
+  </app-user>
+</ul>
+
+<app-user-search></app-user-search>

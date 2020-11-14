@@ -1,0 +1,12 @@
+<form #f="ngForm" class="text-center border border-light p-5" (ngSubmit)="loginHandler(f)" novalidate>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" placeholder="Email" name="email" ngModel required #email="ngModel">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password"class="form-control" placeholder="Password" name="password" ngModel required #password="ngModel">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>

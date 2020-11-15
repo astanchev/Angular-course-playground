@@ -38,13 +38,16 @@ export class MoviesService {
   getAllMovies(search: string): Observable<IMovie[]> {
     let searchAddOn = search ? `?where=${escape(`title LIKE '%${search}%'`)}` : '';
     const url: string = environment.backendless.url + environment.backendless.endpoints.movie + searchAddOn;
-    const options = { headers: new HttpHeaders({ 'user-token': this.storage.getItem('userToken') }) };
+    const userToken: string = this.storage.getItem('userToken');
+    const options = { headers: new HttpHeaders({ 'user-token': userToken }) };
 
     return this.http.get<IMovie[]>(url, options);
   }
 
-  getMovieById() {
+  getMovieById(id: string): Observable<IMovie> {
+    const url: string = environment.backendless.url + environment.backendless.endpoints.movie + `/${id}`;
 
+    return this.http.get<IMovie>(url, this.getHttpOptions);
   }
 
   editMovie() {

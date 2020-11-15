@@ -8,13 +8,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MovieAddComponent } from './components/movie-add/movie-add.component';
+import { MoviesListItemComponent } from './components/movies-list-item/movies-list-item.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MoviesSearchComponent } from './components/movies-search/movies-search.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MoviesService } from './services/movies.service';
 import { storageServiceProvider } from './services/storage.service';
 import { UserService } from './services/user.service';
-import { MoviesListItemComponent } from './components/movies-list-item/movies-list-item.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MoviesListItemComponent } from './components/movies-list-item/movies-li
     MoviesListComponent,
     MovieAddComponent,
     MoviesSearchComponent,
-    MoviesListItemComponent
+    MoviesListItemComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,

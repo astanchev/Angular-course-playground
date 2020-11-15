@@ -1,0 +1,16 @@
+<form #f="ngForm" class="text-center border border-light p-5" (ngSubmit)="createMovie(f)" novalidate>
+    <h1>Add Movie</h1>
+    <div class="form-group">
+        <label for="title">Movie Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="title" ngModel required #title="ngModel">
+    </div>
+    <div class="form-group">
+        <label for="description">Movie Description</label>
+        <textarea class="form-control" placeholder="Description" name="description" ngModel required #description="ngModel"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image url</label>
+        <input type="text" class="form-control" placeholder="Image Url" name="imageUrl"  ngModel required #imageUrl="ngModel">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

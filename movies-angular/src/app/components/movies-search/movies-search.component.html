@@ -1,0 +1,6 @@
+<form #f="ngForm" class="search float-right" (ngSubmit)="searchMovies(f)" novalidate>
+  <label>Search: </label>
+  <input type="text" name="search" ngModel required #search="ngModel">
+  <input type="submit" class="btn btn-info" value="Search">
+</form>
+

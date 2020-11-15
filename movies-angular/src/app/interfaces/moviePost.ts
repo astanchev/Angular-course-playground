@@ -1,6 +1,4 @@
-import { IBase } from './base';
-
-export interface IMovie extends IBase{
+export interface IMoviePost{
     title: string,
     imageUrl: string,
     description: string,

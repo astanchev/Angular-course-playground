@@ -1,8 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-
 import { environment } from 'src/environments/environment';
 import { IUser } from '../interfaces/user';
 import { IUserLogin } from '../interfaces/user-login';

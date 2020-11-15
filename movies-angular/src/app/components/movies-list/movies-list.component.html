@@ -1,0 +1,12 @@
+<div class="row d-flex d-wrap justify-content-center">
+  <div *ngIf="movies" class="card-deck d-flex justify-content-center">
+    <div class="card mb-4" *ngFor="let movie of movies">
+      <!-- Movie component -->
+      <app-movies-list-item [movie]="movie"></app-movies-list-item>
+      <!-- Movie component -->
+    </div>
+  </div>
+  <div class="card-deck d-flex justify-content-center">
+    <h1 *ngIf="!movies">No movies...</h1>
+  </div>
+</div>

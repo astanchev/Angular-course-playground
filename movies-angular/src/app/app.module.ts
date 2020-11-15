@@ -1,16 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { UserService } from './services/user.service';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { MovieAddComponent } from './components/movie-add/movie-add.component';
+import { MoviesListComponent } from './components/movies-list/movies-list.component';
+import { MoviesSearchComponent } from './components/movies-search/movies-search.component';
+import { RegisterComponent } from './components/register/register.component';
+import { MoviesService } from './services/movies.service';
 import { storageServiceProvider } from './services/storage.service';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
+import { MoviesListItemComponent } from './components/movies-list-item/movies-list-item.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +23,11 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MoviesListComponent,
+    MovieAddComponent,
+    MoviesSearchComponent,
+    MoviesListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +38,7 @@ import { FormsModule } from '@angular/forms';
   providers: [
     UserService,
     storageServiceProvider,
+    MoviesService
   ],
   bootstrap: [AppComponent]
 })

@@ -10,11 +10,42 @@
 <section class="search-section" *ngIf="isLogged">
   <a routerLink="movie/add" class="btn btn-warning ">Add Movie</a>
   <!-- Search component -->
-  <app-movies-search (movies)="getMovies($event)"></app-movies-search>
+  <app-movies-search (loading)="showLoading($event)" (movies)="getMovies($event)"></app-movies-search>
   <!-- Search component -->
 </section>
 
-<div class=" mt-3 " *ngIf="isLogged">
+<div class="text-center" *ngIf="loading && isLogged">
+  <div class="loadingio-spinner-spin-972jdjogufj">
+    <div class="ldio-ycpkjvicma">
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" mt-3 " *ngIf="isLogged && !loading">
   <!-- Movies component -->
   <app-movies-list [movies]="movies"></app-movies-list>
   <!-- Movies component -->

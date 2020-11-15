@@ -11,7 +11,7 @@ export class HomeComponent {
   get isLogged(): boolean {
     return !!this.userService.userToken;
   }
-
+  loading: boolean = true;
   movies: IMovie[];
 
   constructor(private userService: UserService) { }
@@ -20,4 +20,7 @@ export class HomeComponent {
     this.movies = movies;
   }
 
+  showLoading(loading: boolean){
+    this.loading = loading;
+  }
 }

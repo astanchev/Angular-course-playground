@@ -18,7 +18,8 @@ export class LoginComponent {
   loginHandler(f: NgForm): void {
     const { email, password } = f.value;
 
-    this.userService.login(email, password);
+    this.userService
+      .login(email, password);
     this.router.navigate(['/']);
   }
 }

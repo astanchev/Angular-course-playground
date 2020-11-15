@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IMovie } from '../interfaces/movie';
 import { IMoviePost } from '../interfaces/moviePost';
@@ -39,8 +38,9 @@ export class MoviesService {
   getAllMovies(search: string): Observable<IMovie[]> {
     let searchAddOn = search ? `?where=${escape(`title LIKE '%${search}%'`)}` : '';
     const url: string = environment.backendless.url + environment.backendless.endpoints.movie + searchAddOn;
+    const options = { headers: new HttpHeaders({ 'user-token': this.storage.getItem('userToken') }) };
 
-    return this.http.get<IMovie[]>(url, this.getHttpOptions);
+    return this.http.get<IMovie[]>(url, options);
   }
 
   getMovieById() {

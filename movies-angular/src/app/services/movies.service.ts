@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IMovie } from '../interfaces/movie';
+import { IMovieEdit } from '../interfaces/movieEdit';
 import { IMoviePost } from '../interfaces/moviePost';
 import { StorageService } from './storage.service';
 
@@ -51,8 +52,10 @@ export class MoviesService {
     return this.http.get<IMovie>(url, this.getHttpOptions);
   }
 
-  editMovie() {
+  editMovie(movie: IMovieEdit, id: string): Observable<void> {
+    const url: string = environment.backendless.url + environment.backendless.endpoints.movie + `/${id}`;
 
+    return this.http.put<void>(url, JSON.stringify(movie), this.postHttpOptions);
   }
 
   deleteMovie(id: string): Observable<void> {

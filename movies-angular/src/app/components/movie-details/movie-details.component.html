@@ -16,7 +16,7 @@
 
       <div *ngIf="isCreator">
         <a class="btn btn-danger" (click)="deleteMovie(movie.objectId)">Delete</a>
-        <a class="btn btn-warning" href="#/movie/edit/{{movie.objectId}}">Edit</a>
+        <a class="btn btn-warning" routerLink="/movie/edit/{{movie.objectId}}">Edit</a>
       </div>
 
       <div *ngIf="!isCreator">

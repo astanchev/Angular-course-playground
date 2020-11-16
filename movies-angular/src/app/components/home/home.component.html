@@ -8,7 +8,7 @@
 
 <h1 *ngIf="isLogged" class="text-center">Movies</h1>
 <section class="search-section" *ngIf="isLogged">
-  <a routerLink="movie/add" class="btn btn-warning ">Add Movie</a>
+  <a routerLink="/movie/add" class="btn btn-warning ">Add Movie</a>
   <!-- Search component -->
   <app-movies-search (loading)="showLoading($event)" (movies)="getMovies($event)"></app-movies-search>
   <!-- Search component -->

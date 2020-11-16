@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IMovie } from 'src/app/interfaces/movie';
 import { MoviesService } from 'src/app/services/movies.service';
 import { StorageService } from 'src/app/services/storage.service';
@@ -20,6 +20,7 @@ export class MovieDetailsComponent implements OnInit {
     private moviesService: MoviesService,
     private route: ActivatedRoute,
     private storage: StorageService,
+    private router: Router
   ) { }
 
   ngOnInit(): void { this.getMovieByID(); }
@@ -45,5 +46,10 @@ export class MovieDetailsComponent implements OnInit {
 
   likeMovie(movieId: string): void {
     this.moviesService.likeMovie(movieId).subscribe(() => this.ngOnInit());
+  }
+
+  deleteMovie(movieId: string): void {
+    this.moviesService.deleteMovie(movieId).subscribe();
+    this.router.navigate(['/']);
   }
 }

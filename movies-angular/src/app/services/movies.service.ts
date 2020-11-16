@@ -55,8 +55,10 @@ export class MoviesService {
 
   }
 
-  deleteMovie() {
+  deleteMovie(id: string): Observable<void> {
+    const url: string = environment.backendless.url + environment.backendless.endpoints.movie + `/${id}`;
 
+    return this.http.delete<void>(url, this.getHttpOptions);
   }
 
   likeMovie(id: string): Observable<void> {

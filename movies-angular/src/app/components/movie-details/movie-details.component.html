@@ -20,7 +20,7 @@
       </div>
 
       <div *ngIf="!isCreator">
-        <a *ngIf="!isLiked" class="btn btn-primary" href="#/movie/like/{{movie.objectId}}">Like</a>
+        <a *ngIf="!isLiked" class="btn btn-primary" (click)="likeMovie(movie.objectId)">Like</a>
         <span *ngIf="isLiked" class="enrolled-span">Liked {{count}}</span>
       </div>
 

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IMovie } from '../interfaces/movie';
 import { IMoviePost } from '../interfaces/moviePost';
@@ -58,7 +59,19 @@ export class MoviesService {
 
   }
 
-  likeMovie() {
+  likeMovie(id: string): Observable<void> {
+    const email: string = this.storage.getItem('email');
+    const url: string = environment.backendless.url + environment.backendless.endpoints.movie + `/${id}`;
 
+    return this.getMovieById(id)
+    .pipe(
+      switchMap(movie => {
+        const people = movie.peopleLiked ?
+                      movie.peopleLiked.split(', ').filter(x => x !== '') :
+                      [];
+        people.push(email);
+        return this.http.put<void>(url, JSON.stringify({ peopleLiked: people.join(', ') }), this.postHttpOptions);
+      })
+    )
   }
 }

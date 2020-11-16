@@ -20,11 +20,9 @@ export class MovieDetailsComponent implements OnInit {
     private moviesService: MoviesService,
     private route: ActivatedRoute,
     private storage: StorageService,
-  ) {
-    this.getMovieByID();
-  }
+  ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { this.getMovieByID(); }
 
   getMovieByID() {
     const movieId: string = this.route.snapshot.paramMap.get('id');
@@ -36,10 +34,16 @@ export class MovieDetailsComponent implements OnInit {
       .subscribe(data => {
         this.movie = data;
         this.isCreator = data.ownerId === userId;
-        const people = data.peopleLiked.split(', ').filter(x => x !== '');
+        const people = data.peopleLiked ?
+                data.peopleLiked.split(', ').filter(x => x !== '') :
+                [];
         this.isLiked = people.indexOf(userEmail) > - 1 ? true : false;
         this.count = people.length;
         this.loading = false;
       });
+  }
+
+  likeMovie(movieId: string): void {
+    this.moviesService.likeMovie(movieId).subscribe(() => this.ngOnInit());
   }
 }

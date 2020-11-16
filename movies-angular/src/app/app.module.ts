@@ -16,6 +16,7 @@ import { MoviesService } from './services/movies.service';
 import { storageServiceProvider } from './services/storage.service';
 import { UserService } from './services/user.service';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     MoviesSearchComponent,
     MoviesListItemComponent,
     MovieDetailsComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

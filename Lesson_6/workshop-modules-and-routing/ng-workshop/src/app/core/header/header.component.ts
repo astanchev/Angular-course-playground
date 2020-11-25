@@ -24,10 +24,13 @@ export class HeaderComponent implements OnDestroy {
     public userService: UserService,
     router: Router
   ) {
-    this.subscription = router.events.pipe(filter(e => e instanceof ActivationEnd), throttleTime(0)).subscribe((e: ActivationEnd) => {
-      title.setTitle(e.snapshot.data?.title);
-      this.hideNavigation = !!e.snapshot.data?.noNavigation;
-    });
+    this.subscription = router.events
+        .pipe(
+          filter(e => e instanceof ActivationEnd), throttleTime(0)
+          ).subscribe((e: ActivationEnd) => {
+                title.setTitle(e.snapshot.data?.title);
+                this.hideNavigation = !!e.snapshot.data?.noNavigation;
+          });
   }
 
   logoutHandler(): void {

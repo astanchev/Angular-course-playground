@@ -260,7 +260,7 @@
     debug "^4.1.0"
     gensync "^1.0.0-beta.1"
     json5 "^2.1.2"
-    lodash "^4.17.13"
+    lodash "^4.17.21"
     resolve "^1.3.2"
     semver "^5.4.1"
     source-map "^0.5.0"
@@ -282,7 +282,7 @@
     debug "^4.1.0"
     gensync "^1.0.0-beta.1"
     json5 "^2.1.2"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
     resolve "^1.3.2"
     semver "^5.4.1"
     source-map "^0.5.0"
@@ -294,7 +294,7 @@
   dependencies:
     "@babel/types" "^7.9.6"
     jsesc "^2.5.1"
-    lodash "^4.17.13"
+    lodash "^4.17.21"
     source-map "^0.5.0"
 
 "@babel/generator@^7.12.1", "@babel/generator@^7.12.5", "@babel/generator@^7.9.6":
@@ -347,7 +347,7 @@
   dependencies:
     "@babel/helper-function-name" "^7.10.4"
     "@babel/types" "^7.10.5"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
 
 "@babel/helper-explode-assignable-expression@^7.10.4":
   version "7.12.1"
@@ -406,7 +406,7 @@
     "@babel/template" "^7.10.4"
     "@babel/traverse" "^7.12.1"
     "@babel/types" "^7.12.1"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
 
 "@babel/helper-optimise-call-expression@^7.10.4":
   version "7.10.4"
@@ -425,7 +425,7 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-regex/-/helper-regex-7.10.5.tgz#32dfbb79899073c415557053a19bd055aae50ae0"
   integrity sha512-68kdUAzDrljqBrio7DYAEgCoJHxppJOERHOgOrDN7WjOzP0ZQ1LsSDRXcemzVZaLvjaJsJEESb6qt+znNuENDg==
   dependencies:
-    lodash "^4.17.19"
+    lodash "^4.17.21"
 
 "@babel/helper-remap-async-to-generator@^7.12.1":
   version "7.12.1"
@@ -1023,7 +1023,7 @@
     "@babel/types" "^7.12.5"
     debug "^4.1.0"
     globals "^11.1.0"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
 
 "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.12.1", "@babel/types@^7.12.5", "@babel/types@^7.4.4", "@babel/types@^7.8.6", "@babel/types@^7.9.6":
   version "7.12.6"
@@ -1031,7 +1031,7 @@
   integrity sha512-hwyjw6GvjBLiyy3W0YQf0Z5Zf4NpYejUnKFcfcUhZCSffoBBp30w6wP2Wn6pk31jMYZvcOrB/1b7cGXvEoKogA==
   dependencies:
     "@babel/helper-validator-identifier" "^7.10.4"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
     to-fast-properties "^2.0.0"
 
 "@istanbuljs/schema@^0.1.2":
@@ -1687,7 +1687,7 @@ async@^2.6.2:
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
   integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
   dependencies:
-    lodash "^4.17.14"
+    lodash "^4.17.21"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -4281,7 +4281,7 @@ http-proxy-middleware@0.19.1:
   dependencies:
     http-proxy "^1.17.0"
     is-glob "^4.0.0"
-    lodash "^4.17.11"
+    lodash "^4.17.21"
     micromatch "^3.1.10"
 
 http-proxy@^1.17.0, http-proxy@^1.18.1:
@@ -4476,7 +4476,7 @@ inquirer@7.1.0:
     cli-width "^2.0.0"
     external-editor "^3.0.3"
     figures "^3.0.0"
-    lodash "^4.17.15"
+    lodash "^4.17.21"
     mute-stream "0.0.8"
     run-async "^2.4.0"
     rxjs "^6.5.3"
@@ -5110,7 +5110,7 @@ karma@~5.0.0:
     graceful-fs "^4.2.4"
     http-proxy "^1.18.1"
     isbinaryfile "^4.0.6"
-    lodash "^4.17.15"
+    lodash "^4.17.21"
     log4js "^6.2.1"
     mime "^2.4.5"
     minimatch "^3.0.4"
@@ -5271,9 +5271,9 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
 log-symbols@^3.0.0:
@@ -8790,7 +8790,7 @@ webpack-merge@4.2.2:
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
   integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
   dependencies:
-    lodash "^4.17.15"
+    lodash "^4.17.21"
 
 webpack-sources@1.4.3, webpack-sources@^1.1.0, webpack-sources@^1.2.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   version "1.4.3"

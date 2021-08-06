@@ -7954,9 +7954,9 @@ webpack-sources@1.4.3, webpack-sources@^1.1.0, webpack-sources@^1.2.0, webpack-s
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-subresource-integrity@1.5.1-rc.6:
-  version "1.5.1-rc.6"
-  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-1.5.1-rc.6.tgz#37f6f1264e1eb378e41465a98da80fad76ab8886"
+webpack-subresource-integrity@1.6.1-rc.6:
+  version "1.6.1-rc.6"
+  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-1.6.1-rc.6.tgz#37f6f1264e1eb378e41465a98da80fad76ab8886"
   integrity sha512-Az7y8xTniNhaA0620AV1KPwWOqawurVVDzQSpPAeR5RwNbL91GoBSJAAo9cfd+GiFHwsS5bbHepBw1e6Hzxy4w==
   dependencies:
     webpack-core "^0.6.8"
